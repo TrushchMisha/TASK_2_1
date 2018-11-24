@@ -1,19 +1,19 @@
 package com.tm;
 
 public class Monster {
-    public int hp;
-    public int damage;
+    private int hp;
+    private int damage;
 
     public Monster(int hp, int damage){
         this.hp = hp;
         this.damage = damage;
     }
 
-    private int getHP() {
+    public int getHP() {
         return hp;
     }
 
-    private int getDamage() {
+    public int getDamage() {
         return damage;
     }
 
@@ -26,6 +26,7 @@ public class Monster {
     }
 
     public void info(){
+
         System.out.println("Hero HP = " + getHP() + ", Damage = " + getDamage());
     }
 }

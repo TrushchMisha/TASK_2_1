@@ -3,14 +3,6 @@ package com.tm;
 import java.util.Scanner;
 
 public class Main {
-    public static String startBattle(Hero hero, Monster monster){
-        if(monster.hp <= 0){
-            return "Hero wins!";
-        } else if(hero.hp <= 0){
-            return "Monster wins!";
-        }
-        return "";
-    }
 
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
@@ -35,21 +27,8 @@ public class Main {
         monster.setDamage(mDMG);
 
 
-        while(hero.hp > 0 && monster.hp > 0){
-            hero.hp -= monster.damage;
-            System.out.println("Monster attacked hero, he made " + monster.damage + ", heros hp is " + hero.hp);
-            if(hero.hp <= 0){
-                System.out.println("Monster wins!");
-            }
-            if(hero.hp > 0) {
-                monster.hp -= hero.damage;
-                System.out.println("Hero attacked monster, he made " + hero.damage + ", monsters hp is " + monster.hp);
-                if(monster.hp <= 0){
-                    System.out.println("Hero wins!");
-                }
-            }
-        }
-        startBattle(hero, monster);
+        BattleStage.attack(hero, monster);
+        System.out.println(BattleStage.startBattle(hero, monster));
 
     }
 
