@@ -26,7 +26,6 @@ public class Monster {
     }
 
     public void info(){
-
         System.out.println("Hero HP = " + getHP() + ", Damage = " + getDamage());
     }
 }

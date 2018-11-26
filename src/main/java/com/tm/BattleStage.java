@@ -18,7 +18,6 @@ public class BattleStage {
             if(hero.getHP() > 0) {
                 monster.setHP(monster.getHP() - hero.getDamage());
                 System.out.println("Hero attacked monster, he made " + hero.getDamage() + ", monsters hp is " + monster.getHP());
-
             }
         }
         return "";
